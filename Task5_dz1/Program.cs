@@ -1,12 +1,22 @@
 ﻿using System;
-Console.Clear();
-Console.Write("Введите число А: ");
+ Console.Clear();
+ Console.Write("Введите число А: ");
 int A = int.Parse(Console.ReadLine());
 Console.Write("Введите число B: ");
 int B = int.Parse(Console.ReadLine());
-int max = A;
-if(max<B)
+
+if(A < B)
 {
-    max = B;
+    Console.WriteLine($"max = {B}");
 }
-Console.WriteLine($"max= {max}");
+else
+{
+    if (A > B)
+    {
+        Console.WriteLine($"max = {A}");
+    }
+    else
+    {
+        Console.WriteLine($"{A} = {B}");
+    }
+}
