@@ -3,14 +3,19 @@ Console.Clear();
 Console.Write("Введите число N: ");
 int N = int.Parse(Console.ReadLine());
 int i = 1;
-int S = 0;
-while(i<N)
+while(i<=N)
 {
     if(i%2==0)
     {
-        S = i;
-        Console.Write($"{S}, ");
+        Console.Write($"{i}, ");
     }
 
     i++;
+}
+Console.WriteLine();
+int K = 2;
+while(K<=N)
+{
+    Console.Write($"{K}, ");
+    K+=2;
 }
