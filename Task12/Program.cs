@@ -5,19 +5,12 @@ Write("Введите число A: ");
 int A = int.Parse(ReadLine());
 Write("Введите число B: ");
 int B = int.Parse(ReadLine());
-if (A > B)
+if (A % B==0)
 {
-    int a1 = A % B;
-    if(a1 == 0)
-    {
-        WriteLine($"{A},{B} -> кратно");
-    }
-    else
-    {
-        WriteLine($"{A},{B} -> не кратно, остаток {A % B}");
-    }
+    WriteLine($"{A},{B} -> кратно");
 }
 else
 {
-    WriteLine("Ошибка ввода");
+    WriteLine($"{A},{B} -> не кратно, остаток {A % B}");
 }
+   
