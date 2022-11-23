@@ -4,11 +4,24 @@ Clear();
 //основной код программы
 Write("Введите число N: ");
 int N = int.Parse(ReadLine());
-int summa = GetCountNumbers(N);
-WriteLine($"{N} -> Кол-во цифр: {summa}");
+int summa1 = GetCountNumbers(N);
+int summa2 = GetCountNumbers(-N);
+
+if(N==0)
+{
+    WriteLine($"Так как '{N}' является цифрой, то кол-во цифр: 1");
+}
+else if(N<0)
+{
+    WriteLine($"{N} -> Кол-во цифр: {summa2}");
+}
+else
+{
+    WriteLine($"{N} -> Кол-во цифр: {summa1}");
+}
 
 
-
+//метод:
 int GetCountNumbers(int number)
 {
     int count = 0; // переменная которая будет возвращаться
