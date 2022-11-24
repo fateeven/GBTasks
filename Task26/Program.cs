@@ -5,7 +5,7 @@ Clear();
 Write("Введите число N: ");
 int N = int.Parse(ReadLine());
 int summa1 = GetCountNumbers(N);
-int summa2 = GetCountNumbers(-N);
+int summa2 = GetCountNumbers(-N); //добавление данной переменной с минусом N, позволяет считать сумму цифр или кол-во цифр в минусовых числах
 
 if(N==0)
 {
