@@ -1,4 +1,9 @@
-﻿using System;
+﻿
+//Данная программа выводит на экран массив нужной нам длины из случайных целых чисел.
+//Поозволяет пользователю задать минимальное и максимальное значение массива.
+//Позволяет пользователю отсортировать рандомный массива по убыванию или возрастанию.
+
+using System;
 using static System.Console;
 
 Clear();
@@ -12,7 +17,7 @@ int C = int.Parse(ReadLine());
 if (A <= 0 || B > C)
 {
     Console.WriteLine("Ошибка ввода, размер массива не может быть < или = 0");
-    return;
+    return;                                       // * узнать как оптимально вернутся к предложению ввода А:, вместо return?
 }
 
 int[] sort = GetRandomArray(A, B, C);
@@ -30,7 +35,7 @@ if (p > 2 || p <= 0)
 else if (p == 1)
 {
     Sortincreasing(sort);
-    PrintArray(sort);
+    PrintArray(sort); 
 }
 else
 {
@@ -55,11 +60,11 @@ void PrintArray(int[] array)
     int count = array.Length;
     for (int i = 0; i < count; i++)
     {
-        //int M = array[i];
-        //string N = String.Join(", ", M);
+        //int M = array[i];                                  //  * Узнать кк поставить всю длину массива в одной [   ]?
+        //string N = String.Join(", ", M);                   //  * в коментариях слева - попытк вывести  всю длину массива в одной [   ]
         //Write($"[{N}]");
         //WriteLine($"[{String.Join(", ", N)}]");
-        Console.Write($" {array[i]} ");
+        Console.Write($" {array[i]} ");                      //  * не смог вывести ответ всю длину массива в одной [   ]
     }
     Console.WriteLine();
 }
