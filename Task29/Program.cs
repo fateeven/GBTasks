@@ -9,9 +9,34 @@ int B = int.Parse(ReadLine());
 Write("Введите Максимальное значение массива: ");
 int C = int.Parse(ReadLine());
 
-WriteLine($"[{String.Join(", ", GetRandomArray(A, B, C))}]");
+if (A <= 0 || B > C)
+{
+    Console.WriteLine("Ошибка ввода, размер массива не может быть < или = 0");
+    return;
+}
 
+int[] sort = GetRandomArray(A, B, C);
+string G = String.Join(", ", sort);
+WriteLine($"[{G}]");
+WriteLine("Хотите отсортировать данный массив?");
+WriteLine("Ведите: 0-нет, 1-по возрастанию, 2-по убыванию: ");
+int p = int.Parse(ReadLine());
 
+if (p > 2 || p <= 0)
+{
+    WriteLine($"[{G}]");
+    return;
+}
+else if (p == 1)
+{
+    Sortincreasing(sort);
+    PrintArray(sort);
+}
+else
+{
+    SortDescending(sort);
+    PrintArray(sort);
+}
 
 //метод создания рандома
 int[] GetRandomArray(int size, int minValue, int maxValue)
@@ -22,4 +47,53 @@ int[] GetRandomArray(int size, int minValue, int maxValue)
         result[i] = new Random().Next(minValue, maxValue);
     }
     return result;
+}
+
+//метод вывода массива(из лекции)
+void PrintArray(int[] array)
+{
+    int count = array.Length;
+    for (int i = 0; i < count; i++)
+    {
+        //int M = array[i];
+        //string N = String.Join(", ", M);
+        //Write($"[{N}]");
+        //WriteLine($"[{String.Join(", ", N)}]");
+        Console.Write($" {array[i]} ");
+    }
+    Console.WriteLine();
+}
+//метод сортировки по возрастанию(из лекции)
+void Sortincreasing(int[] array)
+{
+    for (int i = 0; i < array.Length - 1; i++) // -1 нужна что бы выровнить общее кол-во элементов массива Length
+    {
+        int minPosition = i;
+        for (int j = i + 1; j < array.Length; j++)    //прибавляем i + 1 -необходимо для последовательной сортировки j
+        {
+            if (array[j] < array[minPosition])
+                minPosition = j; //если поменять знак меньше на больше, то маcсив выстроится от максимального к минимальному значению
+        }
+        int temporary = array[i];
+        array[i] = array[minPosition];
+        array[minPosition] = temporary;
+    }
+
+}
+//метод сортировки по убыванию(из лекции)
+void SortDescending(int[] array)
+{
+    for (int i = 0; i < array.Length - 1; i++) // -1 нужна что бы выровнить общее кол-во элементов массива Length
+    {
+        int minPosition = i;
+        for (int j = i + 1; j < array.Length; j++)    //прибавляем i + 1 -необходимо для последовательной сортировки j
+        {
+            if (array[j] > array[minPosition])
+                minPosition = j; //если поменять знак меньше на больше, то маcсив выстроится от максимального к минимальному значению
+        }
+        int temporary = array[i];
+        array[i] = array[minPosition];
+        array[minPosition] = temporary;
+    }
+
 }
