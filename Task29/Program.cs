@@ -1,6 +1,6 @@
-﻿
-//Данная программа выводит на экран массив нужной нам длины из случайных целых чисел.
-//Поозволяет пользователю задать минимальное и максимальное значение массива.
+﻿//Данная программа выводит на экран массив  из случайных целых чисел;
+//Позволяет пользователю задать длину массива;
+//Поозволяет пользователю задать минимальное и максимальное значение массива;
 //Позволяет пользователю отсортировать рандомный массива по убыванию или возрастанию.
 
 using System;
@@ -34,7 +34,7 @@ if (p > 2 || p <= 0)
 }
 else if (p == 1)
 {
-    Sortincreasing(sort);
+    SortIncreasing(sort);
     PrintArray(sort); 
 }
 else
@@ -69,21 +69,20 @@ void PrintArray(int[] array)
     Console.WriteLine();
 }
 //метод сортировки по возрастанию(из лекции)
-void Sortincreasing(int[] array)
+void SortIncreasing(int[] array)
 {
     for (int i = 0; i < array.Length - 1; i++) // -1 нужна что бы выровнить общее кол-во элементов массива Length
     {
         int minPosition = i;
         for (int j = i + 1; j < array.Length; j++)    //прибавляем i + 1 -необходимо для последовательной сортировки j
         {
-            if (array[j] < array[minPosition])
-                minPosition = j; //если поменять знак меньше на больше, то маcсив выстроится от максимального к минимальному значению
+            if (array[j] < array[minPosition])   //если поменять знак меньше на больше, то маcсив выстроится от максимального к минимальному значению
+                minPosition = j; 
         }
         int temporary = array[i];
         array[i] = array[minPosition];
         array[minPosition] = temporary;
     }
-
 }
 //метод сортировки по убыванию(из лекции)
 void SortDescending(int[] array)
@@ -93,12 +92,11 @@ void SortDescending(int[] array)
         int minPosition = i;
         for (int j = i + 1; j < array.Length; j++)    //прибавляем i + 1 -необходимо для последовательной сортировки j
         {
-            if (array[j] > array[minPosition])
-                minPosition = j; //если поменять знак меньше на больше, то маcсив выстроится от максимального к минимальному значению
+            if (array[j] > array[minPosition]) //если поменять знак меньше на больше, то маcсив выстроится от максимального к минимальному значению
+                minPosition = j; 
         }
         int temporary = array[i];
         array[i] = array[minPosition];
         array[minPosition] = temporary;
     }
-
 }
