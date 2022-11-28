@@ -10,12 +10,20 @@ string I = String.Join(", ", array);
 Write($"[{G}] --> [{I}]");                //строка нужна только для оформления ответа в []  
 
 
-//метод инверсии чисел  в массиве, без возврата значения
-void InverseArray(int[] inArray)
+//метод gjbcrf чисел  в массиве, без возврата значения
+void InverseArray(int[] inArray, int find)
 {
+    
     for (int i = 0; i < inArray.Length; i++) // добавили к переменной array свойство Length которое вернет нам кол-во элиментов в массиве
     {
-        inArray[i] *= -1; //значение каждого индекса в массиве умножается на -1.
+        if (inArray[i] == find)
+        {
+            Writeline(inArray);
+        }
+        else
+        {
+            Writeline("Искомого числа в масиве нет");
+        } 
     }
 }
 
