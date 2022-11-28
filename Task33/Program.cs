@@ -13,7 +13,7 @@ int Element = int.Parse(ReadLine());
 
 if (FindElementInArray(array, Element))
 {
-    WriteLine($"Элемент {Element} найден массиве {G}");
+    WriteLine($"Элемент {Element} найден в массиве {G}");
 }
 else
 {
@@ -27,7 +27,7 @@ int[] GetArrayFromString(string stringArray)
 {                                                                                     //StringSplitOptions.RemoveEmptyEntries - удаляет из массива двойные пробелы
     string[] numS = stringArray.Split(' ', StringSplitOptions.RemoveEmptyEntries); //данный оператор разбивает на заданные элементы массив.
     int[] result = new int[numS.Length];
-    for (int i = 0; i < result.Length; i++) //данным действием мы набираем значения в массив result
+    for (int i = 0; i < result.Length; i++) //необходимо добавить служебное слово .Length
     {
         result[i] = int.Parse(numS[i]);  //данным действием мы набираем значения в массив result
     }
