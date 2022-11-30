@@ -48,7 +48,7 @@ int GetCountPositivNumbers(int[] inArray)
     return result;  //кол-во четных 
 }
 
-//Можно посчитать количество положительных чисел в массиве через метод foreach сумму четных чисел в массиве
+//Можно посчитать количество положительных чисел в массиве через метод foreach
 int GetCountPositivNumbers2(int[] inArray)
 {
     int count = 0;
