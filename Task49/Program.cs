@@ -50,9 +50,9 @@ void PrintATwoDimensionalArrey(int[,] inArray)
 //метод который будет изменять значения элементов у которых оба индекса чётные!, и заменит эти элементы на их квадраты
 void ChangeATwoDimensionalElements(int[,] inArray)
 {
-    for (int i = 2; i < inArray.GetLength(0); i++)       //значение 0,0 является и не четным и четным индексами,
-    {                                                    //поэтому пропускаем его и начинаем подсчет со следующего четного индекса 2
-        for (int j = 2; j < inArray.GetLength(1); j++)
+    for (int i = 0; i < inArray.GetLength(0); i++)       
+    {                                                    
+        for (int j = 0; j < inArray.GetLength(1); j++)
         {
             if (i%2==0 && j%2==0)                         //выполняем условие
             {
