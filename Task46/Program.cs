@@ -36,8 +36,8 @@ void PrintATwoDimensionalArrey(int[,] inArray)
     {
         for (int j = 0; j < inArray.GetLength(1); j++)
         {
-            Write($"{inArray[i, j]} ");                     // не забываем пробел для столбцов
+            Write($"{inArray[i, j]}\t ");                     // \t - это команда по табуляции вывода, можно ставить слева или справа от {} 
         }
-        WriteLine();                                        // не забываем пробел для строк             
+        WriteLine();                                        // не забываем пробелs для строк и стобцов           
     }
 }
