@@ -17,12 +17,12 @@ PrintATwoDimensionalArrey(array);
 WriteLine(); //--------------------
 
 string G = String.Join("; ", GetSumColumns(array));
-WriteLine($"Среднее арифмметическое каждого столбца = [{G}]");
+WriteLine($"Среднее арифметическое каждого столбца = [{G}]");
 
 WriteLine(); //--------------------
 
 string I = String.Join("; ", GetSumRows(array));
-WriteLine($"Среднее арифмметическое каждой строки = [{I}]");
+WriteLine($"Среднее арифметическое каждой строки = [{I}]");
 
 
 
