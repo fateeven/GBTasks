@@ -65,7 +65,7 @@ double[] GetSumColumns(int[,] inArray)
         {
             sum += inArray[j,i];      //Важно, для верного результат поставить первым индексом - j, а вторым i
         }
-        result[i] = sum / inArray.GetLength(0);
+        result[i] = Math.Round(sum / inArray.GetLength(0), 2);
     }
     return result;
 }
@@ -82,7 +82,7 @@ double[] GetSumRows(int[,] inArray)
         {
             sum += inArray[i,j];      //Важно, для верного результат поставить первым индексом - j, а вторым i
         }
-        result[i] = sum / inArray.GetLength(1);
+        result[i] = Math.Round(sum / inArray.GetLength(1), 2);
     }
     return result;
 }
