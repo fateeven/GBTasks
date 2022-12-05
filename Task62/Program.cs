@@ -24,18 +24,18 @@ int[,] GetATwoDimensionalArray(int rows, int columns)
     int rowStart = 0;                //определяем начало строки
     int columnStart = 0;             //определяем начальный столбец
 
-    bool left=true;                  //определяет метсоположение слева или справа.
-    bool top= true;                  //определяет метсоположение снизу или сверху, начинае с лева и с верху, поэтому данные переменные уже = true
-    int count = 0;                   //поможет заполнить массив
-    
-    while (count<rows*columns)       //заполнятся массив будет пока count меньше кол-ва элемента нашего массива
+    bool left = true;                 //определяет метсоположение слева или справа.
+    bool top = true;                  //определяет метсоположение снизу или сверху, начинае с лева и с верху, поэтому данные переменные уже = true
+    int count = 0;                    //поможет заполнить массив
+
+    while (count < rows * columns)    //заполнятся массив будет пока count меньше кол-ва элемента нашего массива
     {
-        count++;                     //увеличиваем count на еденицу и записываем ее 
-        result[i,j] = count;         //в значение массива. 
+        count++;                      //увеличиваем count на еденицу и записываем ее 
+        result[i, j] = count;         //в значение массива. 
         //идем вправо
-        if(left&&top)
+        if (left && top)
         {   //если мы достигли значения последнего столбца
-            if(j==columnEnd)
+            if (j == columnEnd)
             {   //тогда нам надо двигаться в низ
                 rowStart++;    //при этомт мы заполнили верхнюю строку
                 top = true;    //мы все еще на верху
@@ -51,9 +51,9 @@ int[,] GetATwoDimensionalArray(int rows, int columns)
         }
 
         //идем вниз
-        if(!left&&top)
+        if (!left && top)
         {   // сначала так же проверяем, достигли ли мы значения последней строки
-            if(i==rowEnd)
+            if (i == rowEnd)
             {
                 columnEnd--;  //заполнили столбец и уменьшаем на еденицу
                 top = false;  //мы переместились вниз
@@ -68,9 +68,9 @@ int[,] GetATwoDimensionalArray(int rows, int columns)
             }
         }
         //идем справа на лево, по нижней строке
-        if(!left&&!top)
+        if (!left && !top)
         {   // сначала так же проверяем, достигли ли мы значения первого столбца
-            if(j== columnStart)
+            if (j == columnStart)
             {
                 rowEnd--;     //заполнилась нижняя строка, убовляем ее на еденицу
                 top = false;
@@ -85,13 +85,13 @@ int[,] GetATwoDimensionalArray(int rows, int columns)
             }
         }
         //идем вверх
-        if(left&&!top)
+        if (left && !top)
         {   // сначала так же проверяем, достигли ли мы значения первой строки
-            if(i==rowStart)
+            if (i == rowStart)
             {
                 columnStart++; //считаем что столбец заполнили
-                top=true;
-                left=true;
+                top = true;
+                left = true;
                 j++;
                 continue;
             }
