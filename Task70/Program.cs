@@ -12,7 +12,7 @@ int a2 = int.Parse(ReadLine());
 Write("Введите длину ряда: ");
 int size = int.Parse(ReadLine());
 Write($"{a1} {a2} ");
-WriteLine(PrintNumber(a1,a2,size));
+WriteLine(PrintNumber(a1,a2,size-2));
 
 
 
