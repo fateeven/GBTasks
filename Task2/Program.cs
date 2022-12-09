@@ -1,7 +1,14 @@
-﻿using System;
+﻿//Программа выдает название недели по заданному номеру
+
+using System;
 Console.Clear();
 Console.Write("Введите число дня недели: ");
 int number = int.Parse(Console.ReadLine());
+
+if (number>7||number<1)
+{
+    Console.WriteLine("Ошибка ввода");
+}
 
 if (number == 1)
 {
@@ -36,9 +43,4 @@ if (number == 6)
 if (number == 7)
 {
     Console.WriteLine("Воскресение");
-}
-
-if (number>7||number<1)
-{
-    Console.WriteLine("Ошибка ввода");
 }
