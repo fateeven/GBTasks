@@ -1,5 +1,8 @@
-﻿using System;
+﻿//Программа которая на вход принимает число N,
+//на выходе выдает является ли число четным(делится ли оно на 2 без остатка)
+using System;
 Console.Clear();
+
 Console.Write("Введите число: ");
 int N = int.Parse(Console.ReadLine());
 
