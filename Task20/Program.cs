@@ -1,5 +1,8 @@
-﻿using System;
+﻿//Программа, которая принимает на вход координаты двух точек 
+//и находит растояние между ними в 2D пространстве.
+using System;
 using static System.Console;
+
 Clear();
 Write("Введите координаты точки A, x1:");
 int x1 = int.Parse(ReadLine());
@@ -10,5 +13,5 @@ int x2 = int.Parse(ReadLine());
 Write("Введите координаты точки B, y2:");
 int y2 = int.Parse(ReadLine());
 
-double D = Math.Sqrt(Math.Pow(x1-x2, 2)+Math.Pow(y1-y2, 2));
+double D = Math.Sqrt(Math.Pow(x1 - x2, 2) + Math.Pow(y1 - y2, 2));
 WriteLine($"A({x1},{y1});B({x2},{y2}) -> {D:f3}");
