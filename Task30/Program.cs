@@ -1,4 +1,6 @@
-﻿using System;
+﻿//Программа, которая выводит массив из 8 элементов
+//наполненых 1 и 0 в случайном порядке
+using System;
 using static System.Console;
 
 Clear();

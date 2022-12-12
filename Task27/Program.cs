@@ -1,4 +1,5 @@
-﻿using System;
+﻿//Программа, которая получает на вход число и выдает сумму цифр в числе
+using System;
 using static System.Console;
 Clear();
 //основной код программы

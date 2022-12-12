@@ -10,7 +10,7 @@ int summ = GetSumNumbers(a);           //вызываем 2-ой метод
 WriteLine($"The sum of the numbers from {a} = {summ}"); 
 
 
-// хоошим тоном является если метод пишется внизу программы
+// метод возращает сумму целых чисел ряда от 1 до А
 int GetSumNumbers(int number)
 {
     int sum = 0; // переменная которая будет возвращаться

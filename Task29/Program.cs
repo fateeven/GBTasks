@@ -35,7 +35,7 @@ if (p > 2 || p <= 0)
 else if (p == 1)
 {
     SortIncreasing(sort);
-    PrintArray(sort); 
+    PrintArray(sort);
 }
 else
 {
@@ -49,7 +49,7 @@ int[] GetRandomArray(int size, int minValue, int maxValue)
     int[] result = new int[size];
     for (int i = 0; i < size; i++)
     {
-        result[i] = new Random().Next(minValue, maxValue+1); //сразу учитываем max+1 что бы захватить максимальный элемент(пороговое значение)
+        result[i] = new Random().Next(minValue, maxValue + 1); //сразу учитываем max+1 что бы захватить максимальный элемент(пороговое значение)
     }
     return result;
 }
@@ -77,7 +77,7 @@ void SortIncreasing(int[] array)
         for (int j = i + 1; j < array.Length; j++)    //прибавляем i + 1 -необходимо для последовательной сортировки j
         {
             if (array[j] < array[minPosition])   //если поменять знак меньше на больше, то маcсив выстроится от максимального к минимальному значению
-                minPosition = j; 
+                minPosition = j;
         }
         int temporary = array[i];
         array[i] = array[minPosition];
@@ -93,7 +93,7 @@ void SortDescending(int[] array)
         for (int j = i + 1; j < array.Length; j++)    //прибавляем i + 1 -необходимо для последовательной сортировки j
         {
             if (array[j] > array[minPosition]) //если поменять знак меньше на больше, то маcсив выстроится от максимального к минимальному значению
-                minPosition = j; 
+                minPosition = j;
         }
         int temporary = array[i];
         array[i] = array[minPosition];

@@ -1,4 +1,6 @@
-﻿using System;
+﻿//Программа, принимает на вход число N 
+//и выдает произведение чисел от 1 до N. т.е. факториал N
+using System;
 using static System.Console;
 Clear();
 //основной код программы
