@@ -39,7 +39,7 @@ double[] GetDoubleArrayFromString(int inArray, int Min, int Max)
     return result;
 }
 
-//метод вывода
+//метод вывода массива вещественных чисел
 void PrintArray(double[] inArray)
 {
     for (int i = 0; i < inArray.Length; i++)

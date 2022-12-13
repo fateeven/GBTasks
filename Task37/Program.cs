@@ -18,9 +18,9 @@ int[] GetArrayFromString(string stringArray)
 {                                                                                  //StringSplitOptions.RemoveEmptyEntries - удаляет из массива двойные пробелы
     string[] numS = stringArray.Split(' ', StringSplitOptions.RemoveEmptyEntries); //данный оператор разбивает на заданные элементы массив.
     int[] result = new int[numS.Length];
-    for (int i = 0; i < result.Length; i++) //необходимо добавить служебное слово .Length
+    for (int i = 0; i < result.Length; i++)                                        //необходимо добавить служебное слово .Length
     {
-        result[i] = int.Parse(numS[i]);  //данным действием мы набираем значения в массив result
+        result[i] = int.Parse(numS[i]);                                            //данным действием мы набираем значения в массив result
     }
     return result;
 }
@@ -39,8 +39,7 @@ int[] GetResultArray(int[] inArray)
     for (int i = 0; i < inArray.Length / 2; i++)
     {                                                             // Cогласно условиям нам нужно получить произведение какжой пары,
         result[i] = inArray[i] * inArray[inArray.Length - 1 - i]; // для этого мы с кажом шагом будем отнимать i от длины вводного массива.
-    }                                                             // но,  так-как 1-й элемент i=0, а последний = -1 , то не забываем это учесть, 
-                                                                  // что делает решение верным с учетом цикличности.
+    }                                                             // но,  так-как 1-й элемент i=0, а последний = -1 , то не забываем это учесть,                                                              // что делает решение верным с учетом цикличности.
     if (inArray.Length % 2 == 1)                                  //Проверяем теперь на нечетность новый массив и если массив нечетный, то  
     {                                                             //приравниваем центральный элемент к последнему элементу массива. -1 не отнимаем.          
         result[size - 1] = inArray[inArray.Length / 2];           //так-как деление целочисленое и нам автоматом отбросит на еденицу меньше.

@@ -18,7 +18,7 @@ if(A+B>C&&A+C>B&&B+C>A)
 }
 else
 {
-    WriteLine("Не может");
+    WriteLine("Неможет");
 }
 
 //--------------------------------------------------
@@ -32,7 +32,7 @@ if (isTriangle(int.Parse(numS[0]),int.Parse(numS[1]), int.Parse(numS[2]))) //в 
 }
 else
 {
-    WriteLine("Не может");
+    WriteLine("Неможет");
 }
 
 // метод bool истина-ложь, проверяет может ли существовать треугольник
