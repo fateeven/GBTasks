@@ -8,7 +8,7 @@ Clear();
 
 Write("Введите массив через пробел: ");
 int[] array = GetArrayFromString(ReadLine());
-string G = String.Join(" ", array); 
+string G = String.Join(" ", array);
 
 int sum = GetCountPositivNumbers(array);
 string I = String.Join(", ", sum);
@@ -33,19 +33,19 @@ int[] GetArrayFromString(string stringArray)
     return result;
 }
 //----------------------------------
-//метод возращает сумму четных чисел в массиве
+//метод возращает сумму положительных чисел в массиве
 int GetCountPositivNumbers(int[] inArray)
 {
-    int result = 0; //количество четных значений
+    int result = 0; //количество положительных значений
 
     for (int i = 0; i < inArray.Length; i++)
-    {                            //Если поменяем на i%2==0 - получим сумму всех четных индексов в массиве                                                            
-        if(inArray[i]>0)         //Если поменяем на inArray[i]%2==1 - получим сумму всех нечетных чисел в массиве
-        {                        //Если поменяем на i%2==1 - получим сумму всех нечетных индексов в массиве  
-            result++;          // Если поменяет на result+=inArray[i] - получим сумму значений четных индексов в массиве и т.д.
+    {
+        if (inArray[i] > 0)
+        {
+            result++;
         }
-    }                                                                                                                                                                    
-    return result;  //кол-во четных 
+    }
+    return result;  //кол-во положительных чисел
 }
 
 //Можно посчитать количество положительных чисел в массиве через метод foreach
@@ -54,7 +54,7 @@ int GetCountPositivNumbers2(int[] inArray)
     int count = 0;
     foreach (int item in inArray)
     {
-        if (item>0) return count++;
+        if (item > 0) return count++;
     }
     return count;
 }

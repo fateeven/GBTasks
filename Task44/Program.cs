@@ -12,8 +12,6 @@ int n = int.Parse(ReadLine());
 Printnumber(0, 1, n);
 
 
-
-
 //метод печати фибоначи
 void Printnumber(int a1, int a2, int size)
 {
