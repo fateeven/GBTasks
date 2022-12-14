@@ -33,7 +33,7 @@ int GetSum(int[] inArray)
     return sum;
 }
 
-//Метод преобразует два массива к исхожному результирующему массиву
+//Метод преобразует два массива к выходному результирующему массиву
 int[] GetResultArray(int[] dataArray, int[] infoArray)
 {
     int[] result = new int[infoArray.Length];

@@ -12,7 +12,6 @@ PrintATwoDimensionalArrey(array);
 
 
 
-
 //Метод формирования двумерного массива, с учетом условий задачи - построить спиральное заполнение
 int[,] GetATwoDimensionalArray(int rows, int columns)
 {

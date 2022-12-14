@@ -9,9 +9,6 @@ int rows = int.Parse(ReadLine());
 PrintTriangle(rows);
 
 
-
-
-
 //метод создания факториала
 int Factorial(int n)
 {

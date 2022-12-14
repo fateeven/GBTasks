@@ -11,7 +11,7 @@ int count = 2;          //вводим переменную - кол-во сим
 PrintWords(chars, count, "");
 
 
-//метод который будет рекурсивно перебирать наши буквы c помощью рекурсии
+//метод который будет рекурсивно перебирать наши буквы
 void PrintWords(string alphabet, int length, string prefix)
 {
     if (length == 0) Write($"{prefix} ");
